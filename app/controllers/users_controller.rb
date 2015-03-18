@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "Welcome Aboard!"
-      render :show
+      redirect_to user_path
     else
       flash[:alert] = "There was a problem creating your account. Sucka."
       redirect_to :back
