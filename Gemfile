@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.5', require: 'bcrypt'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'therubyracer'
+
 
 group :development do
   gem 'byebug'
@@ -20,10 +22,10 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'pry'
 end
 
 group :test do
-  gem 'pry'
   gem 'shoulda-matchers'
   gem 'capybara'
 end
