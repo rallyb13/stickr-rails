@@ -12,6 +12,11 @@ describe "the edit user process" do
     fill_in 'Password', :with => 'p4ssw0rd'
     fill_in 'Password confirmation', :with => 'p4ssw0rd'
     click_on 'Submit'
-    expect(page).to have_content "updated"
+    click_on 'Log Out'
+    click_on 'Log In'
+    fill_in 'Email', :with => 'ezln@ezln.com'
+    fill_in 'Password', :with => 'p4ssw0rd'
+    click_on 'Log in'
+    expect(page).to have_content "You've been logged in."
   end
 end

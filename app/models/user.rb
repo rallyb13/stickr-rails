@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   attr_accessor :password
   validates_confirmation_of :name, :email, :password, :password_confirmation
   validates :name, :email, presence: true
-  before_save :encrypt_password
+  before_create :encrypt_password
+  has_many :photos
 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/

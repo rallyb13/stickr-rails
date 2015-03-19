@@ -4,6 +4,6 @@
 <%= image_tag @user.avatar.url(:medium) %>
 
 
-
+<h3><%= link_to "Add photo", new_photo_path %></h3>
 <h3><%= link_to "Edit", edit_user_path %></h3>
 <h3><%= link_to "Log Out", log_out_path %> </h3>
