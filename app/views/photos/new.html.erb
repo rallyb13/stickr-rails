@@ -4,3 +4,20 @@
   <%= form.file_field :picture %>
   <%= form.submit "Add a photo" %>
 <% end %>
+
+
+<h2><%= @user.name %>'s Liqur Stickrz</h2>
+<% if @user.photos.any? %>
+  <ul>
+    <% @user.photos.each do |photo| %>
+      <li>
+        <%= image_tag(photo.picture.url(:thumb)) %>
+      </li>
+    <% end %>
+  </ul>
+
+
+
+<% else %>
+  <p>You're unstuck!</p>
+<% end %>
