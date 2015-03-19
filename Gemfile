@@ -8,7 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.5', require: 'bcrypt'
-gem 'paperclip'
+gem 'paperclip', "~> 4.2"
 gem 'aws-sdk'
 
 
