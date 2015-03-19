@@ -1,2 +1,6 @@
+<h5>Add a photo</h5>
 
-<%= render 'form' %>
+<%= form_for [@user, @photo], :html => { :multipart => true } do |form| %>
+  <%= form.file_field :picture %>
+  <%= form.submit "Add a photo" %>
+<% end %>

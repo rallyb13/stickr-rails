@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the edit user process" do
   it "edits a user's info" do
-    user = User.create(:name => 'Subcomadante Ramona', :email => 'ezln@ezln.com', :password => "password")
+    user = User.create(:name => 'Subcomadante Ramona', :email => 'ezln@ezln.com', :password => "password", :password_confirmation => "password")
     visit root_path
     click_on 'Log In'
     fill_in 'Email', :with => 'ezln@ezln.com'
