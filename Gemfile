@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'bcrypt-ruby', '~> 3.1.5', require: 'bcrypt'
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'therubyracer'
+
 
 
 group :development do

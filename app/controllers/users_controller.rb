@@ -3,8 +3,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  #this def new was necessary because we had the New in our partial and so it was creating a new account each time
-
   def create
     @user = User.new(user_params)
     if @user.save
