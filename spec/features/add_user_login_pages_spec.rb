@@ -18,6 +18,6 @@ describe "the add a user process" do
     click_on 'Register'
     fill_in 'Name', :with => ''
     click_on 'Submit'
-    expect(page).to have_content ""
+    expect(page).to have_content "There was a problem creating your account. Sucka."
   end
 end
